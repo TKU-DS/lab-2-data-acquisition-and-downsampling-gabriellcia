@@ -63,7 +63,7 @@ def process_and_downsample_stream():
                 
                 # Write the averaged value to disk and clear the buffer
                 writer.writerow([average_val])
-                buffer.clear()
+                buffer.clear() # Membersihkan buffer untuk batch berikutnya
                 
     processed_size = os.path.getsize(PROCESSED_DATA_FILE) / 1024
     print(f"    -> Downsampled File Size: {processed_size:.2f} KB")
